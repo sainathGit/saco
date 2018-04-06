@@ -1,0 +1,26 @@
+{% if questions %}
+
+	<ul>
+			
+	
+	{% for question in questions %}
+		
+		<li><a href = "{% url 'polls:detail' question.id %}">
+					<p> {{question.question}}</p>
+				</a>
+		</li>
+	
+	{% endfor %}
+	
+	</ul>
+
+{% else %}	
+
+	<p>No polls available now come back later!</p>
+	
+{% endif %}
+
+
+
+
+
